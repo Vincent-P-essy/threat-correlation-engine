@@ -1,0 +1,50 @@
+[
+  {
+    "id": "alert-001",
+    "type": "PORT_SCAN",
+    "timestamp": "2024-06-01T10:00:00+00:00",
+    "source_ip": "192.168.1.50",
+    "destination_ip": "10.0.0.1",
+    "port_count": 20,
+    "severity": "HIGH",
+    "description": "Port scan detected from 192.168.1.50"
+  },
+  {
+    "id": "alert-002",
+    "type": "PORT_SCAN",
+    "timestamp": "2024-06-01T10:00:25+00:00",
+    "source_ip": "192.168.1.50",
+    "destination_ip": "10.0.0.2",
+    "port_count": 18,
+    "severity": "HIGH",
+    "description": "Port scan detected from 192.168.1.50"
+  },
+  {
+    "id": "alert-003",
+    "type": "PORT_SCAN",
+    "timestamp": "2024-06-01T10:00:50+00:00",
+    "source_ip": "192.168.1.51",
+    "destination_ip": "10.0.0.3",
+    "port_count": 16,
+    "severity": "HIGH",
+    "description": "Port scan detected from 192.168.1.51"
+  },
+  {
+    "id": "alert-004",
+    "type": "ARP_SPOOF",
+    "timestamp": "2024-06-01T10:01:00+00:00",
+    "source_ip": "192.168.1.99",
+    "destination_ip": "192.168.1.1",
+    "severity": "CRITICAL",
+    "description": "ARP spoofing: 192.168.1.99 claims to be 192.168.1.1"
+  },
+  {
+    "id": "alert-005",
+    "type": "DNS_TUNNEL",
+    "timestamp": "2024-06-01T10:02:00+00:00",
+    "source_ip": "10.0.0.42",
+    "query_length": 245,
+    "severity": "MEDIUM",
+    "description": "Oversized DNS query indicative of tunneling"
+  }
+]
