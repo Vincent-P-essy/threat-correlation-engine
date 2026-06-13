@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "threat-correlation-engine"
+version = "0.1.0"
+description = "Threat correlation engine: correlate security alerts and dispatch incidents"
+authors = [
+    { name = "Vincent Plessy", email = "vincent.plessy12@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0",
+    "requests>=2.31",
+    "python-dateutil>=2.8",
+]
+
+[project.scripts]
+threat-engine = "src.engine:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]

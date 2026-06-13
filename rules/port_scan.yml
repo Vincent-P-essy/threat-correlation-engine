@@ -1,0 +1,9 @@
+name: repeated-port-scan
+type: PORT_SCAN
+severity: HIGH
+description: "Multiple port scan attempts from same source"
+conditions:
+  min_port_count: 15
+time_window_sec: 60
+threshold: 2
+tags: [network, reconnaissance]

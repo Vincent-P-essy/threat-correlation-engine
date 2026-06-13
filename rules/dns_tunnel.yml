@@ -1,0 +1,9 @@
+name: dns-tunneling-attempt
+type: DNS_TUNNEL
+severity: MEDIUM
+description: "DNS tunneling attempt via oversized queries"
+conditions:
+  min_query_length: 100
+time_window_sec: 120
+threshold: 3
+tags: [network, exfiltration]

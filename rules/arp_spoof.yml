@@ -1,0 +1,8 @@
+name: arp-spoofing-campaign
+type: ARP_SPOOF
+severity: CRITICAL
+description: "ARP spoofing detected - possible MITM attack"
+conditions: {}
+time_window_sec: 30
+threshold: 1
+tags: [network, mitm]
