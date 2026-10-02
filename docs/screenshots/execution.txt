@@ -1,0 +1,34 @@
+$ python -m pytest -v --tb=short tests/test_engine.py tests/test_correlator.py
+======================================= test session starts ========================================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0 -- python
+cachedir: .pytest_cache
+rootdir: threat-correlation-engine
+configfile: pyproject.toml
+plugins: cov-7.1.0, platformdirs-4.12.2, anyio-4.15.1, asyncio-1.4.0, respx-0.23.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 20 items
+
+tests/test_engine.py::TestEngineRunFromFile::test_run_from_file_returns_summary_dict PASSED  [  5%]
+tests/test_engine.py::TestEngineRunFromFile::test_processed_count_matches_fixture PASSED     [ 10%]
+tests/test_engine.py::TestEngineRunFromFile::test_correlated_events_are_list PASSED          [ 15%]
+tests/test_engine.py::TestEngineRunFromFile::test_file_not_found_raises PASSED               [ 20%]
+tests/test_engine.py::TestEngineDryRun::test_dry_run_dispatched_equals_correlated PASSED     [ 25%]
+tests/test_engine.py::TestEngineDryRun::test_dry_run_no_http_calls PASSED                    [ 30%]
+tests/test_engine.py::TestEngineEmptyRulesDir::test_empty_rules_dir_gives_zero_events PASSED [ 35%]
+tests/test_engine.py::TestEngineEmptyRulesDir::test_nonexistent_rules_dir_gives_zero_events PASSED [ 40%]
+tests/test_engine.py::TestEngineJsonEnvelope::test_alerts_envelope_format PASSED             [ 45%]
+tests/test_correlator.py::TestCorrelatorPortScan::test_three_alerts_same_window_emits_one_event PASSED [ 50%]
+tests/test_correlator.py::TestCorrelatorPortScan::test_two_alerts_outside_window_emits_no_event PASSED [ 55%]
+tests/test_correlator.py::TestCorrelatorPortScan::test_event_severity_matches_rule PASSED    [ 60%]
+tests/test_correlator.py::TestCorrelatorPortScan::test_event_rule_name PASSED                [ 65%]
+tests/test_correlator.py::TestCorrelatorPortScan::test_condition_port_count_filter PASSED    [ 70%]
+tests/test_correlator.py::TestCorrelatorPortScan::test_source_ips_collected PASSED           [ 75%]
+tests/test_correlator.py::TestCorrelatorArpSpoof::test_single_arp_spoof_emits_critical_event PASSED [ 80%]
+tests/test_correlator.py::TestCorrelatorArpSpoof::test_no_matching_type_emits_no_event PASSED [ 85%]
+tests/test_correlator.py::TestCorrelatorTimestamps::test_first_and_last_seen PASSED          [ 90%]
+tests/test_correlator.py::TestCorrelatorTimestamps::test_two_separate_windows_emit_two_events PASSED [ 95%]
+tests/test_correlator.py::TestCorrelatorTimestamps::test_to_dict_serialisable PASSED         [100%]
+
+======================================== 20 passed in 0.16s ========================================
+
+Exit: 0

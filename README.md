@@ -11,6 +11,12 @@ automatically dispatches incidents to `incident-tracker-api`.
 
 ---
 
+## Execution preview
+
+![threat-correlation-engine execution](docs/screenshots/execution.png)
+
+Local execution of `python -m pytest -v --tb=short tests/test_engine.py tests/test_correlator.py`. The input and output shown come from the repository example or test fixtures. [Verification](docs/verification.md).
+
 ## Role in the Ecosystem
 
 ```
