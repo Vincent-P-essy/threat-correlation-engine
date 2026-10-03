@@ -11,12 +11,6 @@ automatically dispatches incidents to `incident-tracker-api`.
 
 ---
 
-## Execution preview
-
-![threat-correlation-engine execution](docs/screenshots/execution.png)
-
-Local execution of `python -m pytest -v --tb=short tests/test_engine.py tests/test_correlator.py`. The input and output shown come from the repository example or test fixtures. [Verification](docs/verification.md).
-
 ## Role in the Ecosystem
 
 ```
@@ -248,6 +242,6 @@ pytest tests/test_correlator.py -v
 
 ## Author
 
-**Vincent Plessy** – [vincent.plessy12@gmail.com](mailto:vincent.plessy12@gmail.com)
+**Vincent Plessy** – [GitHub](https://github.com/Vincent-P-essy)
 
 Part of a personal cybersecurity portfolio showcasing end-to-end detection and response tooling.
